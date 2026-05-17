@@ -1,0 +1,1747 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Rishabh Kumar — Luxury Wedding Planner & Event Coordinator</title>
+		<meta
+			name="description"
+			content="Rishabh Kumar — Aspiring Wedding Planner & Event Coordinator specialising in luxury Indian weddings, vendor coordination, guest hospitality, and emotionally crafted celebrations."
+		/>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap"
+			rel="stylesheet"
+		/>
+		<style>
+			*,
+			*::before,
+			*::after {
+				box-sizing: border-box;
+				margin: 0;
+				padding: 0;
+			}
+
+			:root {
+				--ivory: #fdfaf5;
+				--champagne: #f5ede0;
+				--text: #2b2b2b;
+				--text-light: #6a6058;
+				--gold: #b08d57;
+				--gold-dark: #8c6b3f;
+				--wine: #6b2737;
+				--wine-dark: #4e1b27;
+				--olive: #556b57;
+				--border: #e0d4c4;
+				--white: #ffffff;
+			}
+
+			html {
+				scroll-behavior: smooth;
+			}
+
+			body {
+				font-family: 'Inter', sans-serif;
+				background: var(--ivory);
+				color: var(--text);
+				line-height: 1.7;
+				font-size: 16px;
+				overflow-x: hidden;
+			}
+
+			/* ── TYPOGRAPHY ── */
+			h1,
+			h2,
+			h3,
+			h4 {
+				font-family: 'Cormorant Garamond', serif;
+				font-weight: 400;
+				line-height: 1.15;
+			}
+
+			.section-label {
+				font-family: 'Inter', sans-serif;
+				font-size: 10px;
+				font-weight: 500;
+				letter-spacing: 0.25em;
+				text-transform: uppercase;
+				color: var(--gold);
+				display: block;
+				margin-bottom: 1rem;
+			}
+
+			.section-heading {
+				font-family: 'Cormorant Garamond', serif;
+				font-size: clamp(2.2rem, 4vw, 3.4rem);
+				font-weight: 400;
+				letter-spacing: 0.01em;
+				color: var(--text);
+				line-height: 1.1;
+			}
+
+			.section-heading em {
+				font-style: italic;
+				color: var(--gold);
+			}
+
+			/* ── NAVBAR ── */
+			nav {
+				position: fixed;
+				top: 0;
+				left: 0;
+				right: 0;
+				z-index: 100;
+				padding: 1.4rem 4vw;
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				background: transparent;
+				transition:
+					background 0.45s ease,
+					box-shadow 0.45s ease,
+					padding 0.35s ease;
+			}
+
+			nav.scrolled {
+				background: #fdfaf6;
+				box-shadow: 0 1px 0 var(--border);
+				padding: 0.9rem 4vw;
+			}
+
+			.nav-logo {
+				font-family: 'Cormorant Garamond', serif;
+				font-size: 1.35rem;
+				font-weight: 600;
+				letter-spacing: 0.05em;
+				color: #ffffff;
+				text-decoration: none;
+				transition: color 0.4s;
+				line-height: 1;
+				text-shadow: none;
+			}
+
+			nav.scrolled .nav-logo {
+				color: var(--text);
+			}
+
+			.nav-links {
+				display: flex;
+				gap: 2.6rem;
+				list-style: none;
+				align-items: center;
+			}
+
+			.nav-links li {
+				position: relative;
+			}
+
+			.nav-links a {
+				font-family: 'Inter', sans-serif;
+				font-size: 10px;
+				font-weight: 500;
+				letter-spacing: 0.14em;
+				text-transform: uppercase;
+				color: rgba(255, 255, 255, 0.92);
+				text-decoration: none;
+				transition: color 0.3s;
+				display: block;
+				text-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+			}
+
+			.nav-links a::after {
+				content: '';
+				position: absolute;
+				bottom: -4px;
+				left: 0;
+				width: 0;
+				height: 1px;
+				background: var(--gold);
+				transition: width 0.3s ease;
+			}
+
+			.nav-links a:hover {
+				color: var(--gold);
+			}
+			.nav-links a:hover::after {
+				width: 100%;
+			}
+
+			nav.scrolled .nav-links a {
+				color: var(--text);
+				text-shadow: none;
+			}
+
+			nav.scrolled .nav-links a:hover {
+				color: var(--gold);
+			}
+
+			.hamburger {
+				display: none;
+				flex-direction: column;
+				gap: 5px;
+				cursor: pointer;
+				padding: 4px;
+			}
+
+			.hamburger span {
+				display: block;
+				width: 24px;
+				height: 1.5px;
+				background: var(--white);
+				transition: background 0.4s;
+			}
+
+			nav.scrolled .hamburger span {
+				background: var(--text);
+			}
+
+			/* ── HERO ── */
+			#hero {
+				position: relative;
+				height: 100svh;
+				min-height: 640px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				text-align: center;
+				overflow: hidden;
+			}
+
+			.hero-bg {
+				position: absolute;
+				inset: 0;
+				background:
+					linear-gradient(
+						to bottom,
+						rgba(24, 10, 3, 0.22) 10%,
+						rgba(15, 8, 3, 0.38) 100%
+					),
+					url('https://images.unsplash.com/photo-1772127822552-ce9ef537bdcf?q=80&w=2384&auto=format&fit=crop')
+						center/cover no-repeat;
+				transform: scale(1.04);
+				animation: heroZoom 18s ease-in-out infinite alternate;
+			}
+
+			@keyframes heroZoom {
+				from {
+					transform: scale(1.04);
+				}
+				to {
+					transform: scale(1);
+				}
+			}
+
+			.hero-content {
+				position: relative;
+				z-index: 2;
+				max-width: 860px;
+				padding: 0 1.5rem;
+				opacity: 0;
+				transform: translateY(24px);
+				animation: fadeUp 1.2s 0.3s ease forwards;
+			}
+
+			@keyframes fadeUp {
+				to {
+					opacity: 1;
+					transform: translateY(0);
+				}
+			}
+
+			.hero-eyebrow {
+				font-family: 'Inter', sans-serif;
+				font-size: 10px;
+				font-weight: 500;
+				letter-spacing: 0.3em;
+				text-transform: uppercase;
+				color: var(--gold);
+				margin-bottom: 1.6rem;
+				opacity: 0;
+				animation: fadeUp 1s 0.7s ease forwards;
+			}
+
+			.hero-title {
+				font-family: 'Cormorant Garamond', serif;
+				font-size: clamp(2.8rem, 6.5vw, 5.2rem);
+				font-weight: 300;
+				color: var(--white);
+				letter-spacing: 0.01em;
+				line-height: 1.05;
+				margin-bottom: 1.6rem;
+				opacity: 0;
+				animation: fadeUp 1s 0.95s ease forwards;
+			}
+
+			.hero-title em {
+				font-style: italic;
+				color: #d4ae78;
+			}
+
+			.hero-sub {
+				font-size: 0.95rem;
+				font-weight: 300;
+				color: rgba(255, 255, 255, 0.72);
+				max-width: 580px;
+				margin: 0 auto 2.8rem;
+				line-height: 1.75;
+				opacity: 0;
+				animation: fadeUp 1s 1.2s ease forwards;
+			}
+
+			.hero-buttons {
+				display: flex;
+				gap: 1.2rem;
+				justify-content: center;
+				flex-wrap: wrap;
+				opacity: 0;
+				animation: fadeUp 1s 1.45s ease forwards;
+			}
+
+			.btn-primary {
+				font-size: 11px;
+				font-weight: 500;
+				letter-spacing: 0.2em;
+				text-transform: uppercase;
+				background: var(--gold);
+				color: var(--white);
+				border: none;
+				padding: 0.9rem 2.2rem;
+				text-decoration: none;
+				cursor: pointer;
+				transition:
+					background 0.3s,
+					transform 0.2s;
+				display: inline-block;
+			}
+
+			.btn-primary:hover {
+				background: var(--gold-dark);
+				transform: translateY(-1px);
+			}
+
+			/* ── SCROLL INDICATOR ── */
+			.scroll-line {
+				position: absolute;
+				bottom: 2.5rem;
+				left: 50%;
+				transform: translateX(-50%);
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				gap: 6px;
+				opacity: 0;
+				animation: fadeUp 1s 2s ease forwards;
+			}
+
+			.scroll-line span {
+				font-size: 9px;
+				letter-spacing: 0.25em;
+				text-transform: uppercase;
+				color: rgba(255, 255, 255, 0.5);
+			}
+
+			.scroll-bar {
+				width: 1px;
+				height: 48px;
+				background: rgba(255, 255, 255, 0.25);
+				position: relative;
+				overflow: hidden;
+			}
+
+			.scroll-bar::after {
+				content: '';
+				position: absolute;
+				top: -100%;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background: var(--gold);
+				animation: scrollDown 2s 2.5s ease-in-out infinite;
+			}
+
+			@keyframes scrollDown {
+				0% {
+					top: -100%;
+				}
+				100% {
+					top: 100%;
+				}
+			}
+
+			/* ── SECTIONS SHARED ── */
+			section {
+				position: relative;
+			}
+
+			.container {
+				max-width: 1200px;
+				margin: 0 auto;
+				padding: 0 4vw;
+			}
+
+			.pad-section {
+				padding: 7rem 0;
+			}
+
+			/* ── DIVIDER ── */
+			.divider {
+				width: 48px;
+				height: 1px;
+				background: var(--gold);
+				margin: 1.5rem 0 2rem;
+			}
+
+			/* ── ABOUT ── */
+			#about {
+				background: var(--ivory);
+			}
+
+			.about-grid {
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+				gap: 6rem;
+				align-items: center;
+			}
+
+			.about-img-wrap {
+				position: relative;
+			}
+
+			.about-img {
+				width: 100%;
+				aspect-ratio: 4/5;
+				object-fit: cover;
+				display: block;
+				background: var(--champagne);
+			}
+
+			.about-img-placeholder {
+				width: 100%;
+				aspect-ratio: 4/5;
+				background: var(--champagne);
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				position: relative;
+				overflow: hidden;
+			}
+
+			.about-img-placeholder img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+				display: block;
+			}
+
+			.about-img-placeholder::after {
+				content: '';
+				position: absolute;
+				inset: 0;
+				background: linear-gradient(
+					135deg,
+					transparent 60%,
+					rgba(176, 141, 87, 0.12)
+				);
+			}
+
+			.about-frame {
+				position: absolute;
+				bottom: -1.5rem;
+				right: -1.5rem;
+				width: 75%;
+				height: 75%;
+				border: 1px solid var(--gold);
+				pointer-events: none;
+				z-index: -1;
+			}
+
+			.about-text p {
+				font-size: 0.95rem;
+				color: var(--text-light);
+				margin-bottom: 1.2rem;
+				line-height: 1.8;
+			}
+
+			.quote-block {
+				border-left: 2px solid var(--gold);
+				padding: 1.2rem 1.8rem;
+				margin: 2.5rem 0;
+				background: var(--champagne);
+			}
+
+			.quote-block p {
+				font-family: 'Cormorant Garamond', serif;
+				font-size: 1.35rem;
+				font-style: italic;
+				font-weight: 400;
+				color: var(--text);
+				line-height: 1.5;
+				margin: 0 !important;
+			}
+
+			/* ── JOURNEY / TIMELINE ── */
+			#journey {
+				background: var(--champagne);
+			}
+
+			.timeline {
+				position: relative;
+				padding-left: 3rem;
+			}
+
+			.timeline::before {
+				content: '';
+				position: absolute;
+				left: 0;
+				top: 0.6rem;
+				bottom: 0.6rem;
+				width: 1px;
+				background: var(--border);
+			}
+
+			.tl-item {
+				position: relative;
+				margin-bottom: 3.5rem;
+				padding-left: 1.5rem;
+			}
+
+			.tl-item:last-child {
+				margin-bottom: 0;
+			}
+
+			.tl-dot {
+				position: absolute;
+				left: -3rem;
+				top: 0.55rem;
+				width: 10px;
+				height: 10px;
+				border-radius: 50%;
+				background: var(--gold);
+				border: 2px solid var(--champagne);
+				box-shadow: 0 0 0 3px var(--gold);
+			}
+
+			.tl-item h3 {
+				font-family: 'Cormorant Garamond', serif;
+				font-size: 1.45rem;
+				font-weight: 500;
+				color: var(--text);
+				margin-bottom: 0.75rem;
+			}
+
+			.tl-item p,
+			.tl-item li {
+				font-size: 0.9rem;
+				color: var(--text-light);
+				line-height: 1.75;
+			}
+
+			.tl-item ul {
+				padding-left: 1.2rem;
+				margin-top: 0.5rem;
+			}
+
+			.tl-item li {
+				margin-bottom: 0.3rem;
+			}
+
+			.tl-item li::marker {
+				color: var(--gold);
+			}
+
+			/* ── PORTFOLIO ── */
+			#portfolio {
+				background: var(--ivory);
+			}
+
+			.portfolio-grid {
+				display: grid;
+				grid-template-columns: repeat(2, 1fr);
+				gap: 1.5rem;
+			}
+
+			.port-card {
+				position: relative;
+				overflow: hidden;
+				cursor: pointer;
+				background: var(--champagne);
+			}
+
+			.port-card-img {
+				width: 100%;
+				aspect-ratio: 4/3;
+				object-fit: cover;
+				display: block;
+				transition: transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+				background: var(--champagne);
+			}
+
+			.port-card-img img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+				display: block;
+				transition: transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+			}
+
+			.port-card:hover .port-card-img img {
+				transform: scale(1.06);
+			}
+
+			.port-card-overlay {
+				position: absolute;
+				inset: 0;
+				background: linear-gradient(
+					to top,
+					rgba(20, 10, 5, 0.78) 0%,
+					transparent 55%
+				);
+				display: flex;
+				align-items: flex-end;
+				padding: 1.8rem;
+				transition: opacity 0.4s;
+			}
+
+			.port-card-body h3 {
+				font-family: 'Cormorant Garamond', serif;
+				font-size: 1.5rem;
+				font-weight: 400;
+				color: var(--white);
+				margin-bottom: 0.4rem;
+			}
+
+			.port-card-body p {
+				font-size: 0.78rem;
+				letter-spacing: 0.15em;
+				text-transform: uppercase;
+				color: var(--gold);
+			}
+
+			.port-card-hover {
+				position: absolute;
+				inset: 0;
+				background: rgba(107, 39, 55, 0.88);
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+				padding: 2.5rem;
+				opacity: 0;
+				transition: opacity 0.4s;
+				text-align: center;
+			}
+
+			.port-card:hover .port-card-hover {
+				opacity: 1;
+			}
+
+			.port-card-hover h3 {
+				font-family: 'Cormorant Garamond', serif;
+				font-size: 1.6rem;
+				color: var(--white);
+				margin-bottom: 1rem;
+			}
+
+			.port-card-hover ul {
+				list-style: none;
+				padding: 0;
+			}
+
+			.port-card-hover li {
+				font-size: 0.82rem;
+				color: rgba(255, 255, 255, 0.78);
+				margin-bottom: 0.35rem;
+				letter-spacing: 0.05em;
+			}
+
+			.port-card-hover li::before {
+				content: '—  ';
+				color: var(--gold);
+			}
+
+			.view-more-btn {
+				display: inline-block;
+				margin-top: 1.2rem;
+				font-size: 10px;
+				letter-spacing: 0.2em;
+				text-transform: uppercase;
+				color: var(--gold);
+				border: 1px solid var(--gold);
+				padding: 0.5rem 1.2rem;
+				text-decoration: none;
+				transition: all 0.3s;
+			}
+
+			.view-more-btn:hover {
+				background: var(--gold);
+				color: var(--white);
+			}
+
+			/* ── MODAL ── */
+			.modal-overlay {
+				position: fixed;
+				inset: 0;
+				background: rgba(20, 10, 5, 0.88);
+				z-index: 200;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				padding: 2rem;
+				opacity: 0;
+				visibility: hidden;
+				transition: all 0.4s;
+			}
+
+			.modal-overlay.active {
+				opacity: 1;
+				visibility: visible;
+			}
+
+			.modal {
+				background: var(--ivory);
+				max-width: 700px;
+				width: 100%;
+				max-height: 90vh;
+				overflow-y: auto;
+				padding: 3.5rem;
+				position: relative;
+				transform: translateY(20px);
+				transition: transform 0.4s;
+			}
+
+			.modal-overlay.active .modal {
+				transform: translateY(0);
+			}
+
+			.modal-close {
+				position: absolute;
+				top: 1.5rem;
+				right: 1.5rem;
+				background: none;
+				border: none;
+				cursor: pointer;
+				font-size: 1.4rem;
+				color: var(--text-light);
+				line-height: 1;
+			}
+
+			.modal-img {
+				width: 100%;
+				aspect-ratio: 16/9;
+				object-fit: cover;
+				margin-bottom: 2rem;
+				background: var(--champagne);
+			}
+
+			.modal-img img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+				display: block;
+			}
+
+			.modal h2 {
+				font-family: 'Cormorant Garamond', serif;
+				font-size: 2rem;
+				margin-bottom: 0.5rem;
+			}
+
+			.modal-tag {
+				font-size: 10px;
+				letter-spacing: 0.25em;
+				text-transform: uppercase;
+				color: var(--gold);
+				display: block;
+				margin-bottom: 1.5rem;
+			}
+
+			.modal p {
+				font-size: 0.9rem;
+				color: var(--text-light);
+				line-height: 1.8;
+				margin-bottom: 1rem;
+			}
+
+			.modal-list {
+				padding-left: 1.2rem;
+				margin-bottom: 1rem;
+			}
+			.modal-list li {
+				font-size: 0.9rem;
+				color: var(--text-light);
+				margin-bottom: 0.4rem;
+			}
+			.modal-list li::marker {
+				color: var(--gold);
+			}
+
+			/* ── SKILLS ── */
+			#skills {
+				background: var(--champagne);
+			}
+
+			.skills-grid {
+				display: grid;
+				grid-template-columns: repeat(4, 1fr);
+				gap: 1.2rem;
+			}
+
+			.skill-card {
+				background: var(--ivory);
+				padding: 1.8rem 1.5rem;
+				border-top: 2px solid transparent;
+				transition:
+					border-color 0.3s,
+					transform 0.3s,
+					box-shadow 0.3s;
+				cursor: default;
+			}
+
+			.skill-card:hover {
+				border-top-color: var(--gold);
+				transform: translateY(-3px);
+				box-shadow: 0 8px 32px rgba(0, 0, 0, 0.07);
+			}
+
+			.skill-icon {
+				font-size: 1.4rem;
+				margin-bottom: 1rem;
+				display: block;
+			}
+
+			.skill-card h4 {
+				font-family: 'Cormorant Garamond', serif;
+				font-size: 1.1rem;
+				font-weight: 500;
+				color: var(--text);
+				margin-bottom: 0.4rem;
+			}
+
+			.skill-card p {
+				font-size: 0.8rem;
+				color: var(--text-light);
+				line-height: 1.6;
+			}
+
+			/* ── APPROACH ── */
+			#approach {
+				background: var(--wine-dark);
+			}
+
+			#approach .section-label {
+				color: rgba(176, 141, 87, 0.8);
+			}
+
+			#approach .section-heading {
+				color: var(--white);
+			}
+
+			.approach-grid {
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+				gap: 5rem;
+				align-items: center;
+			}
+
+			.approach-copy p {
+				font-size: 0.95rem;
+				color: rgba(255, 255, 255, 0.68);
+				line-height: 1.85;
+				margin-bottom: 1.2rem;
+			}
+
+			.approach-metrics {
+				display: flex;
+				flex-direction: column;
+				gap: 2.5rem;
+			}
+
+			.metric-item {
+				border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+				padding-bottom: 2.5rem;
+			}
+
+			.metric-item:last-child {
+				border-bottom: none;
+				padding-bottom: 0;
+			}
+
+			.metric-num {
+				font-family: 'Cormorant Garamond', serif;
+				font-size: 3.5rem;
+				font-weight: 300;
+				color: var(--gold);
+				line-height: 1;
+				margin-bottom: 0.5rem;
+			}
+
+			.metric-label {
+				font-size: 11px;
+				letter-spacing: 0.18em;
+				text-transform: uppercase;
+				color: rgba(255, 255, 255, 0.55);
+			}
+
+			/* ── FOOTER ── */
+			footer {
+				background: var(--text);
+				padding: 2rem 4vw;
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				flex-wrap: wrap;
+				gap: 1rem;
+			}
+
+			.footer-logo {
+				font-family: 'Cormorant Garamond', serif;
+				font-size: 1.2rem;
+				color: var(--white);
+				letter-spacing: 0.08em;
+			}
+
+			.footer-text {
+				font-size: 0.78rem;
+				color: rgba(255, 255, 255, 0.35);
+				text-align: center;
+				font-style: italic;
+			}
+
+			.footer-contact {
+				display: flex;
+				align-items: center;
+				gap: 0.7rem;
+			}
+
+			.footer-contact-item {
+				font-size: 0.78rem;
+				color: rgba(255, 255, 255, 0.5);
+				text-decoration: none;
+				transition: color 0.3s;
+				letter-spacing: 0.02em;
+			}
+
+			.footer-contact-item:hover {
+				color: var(--gold);
+			}
+
+			.footer-contact-sep {
+				color: rgba(255, 255, 255, 0.2);
+				font-size: 0.9rem;
+			}
+
+			/* ── FADE-IN ANIMATIONS ── */
+			.fade-up {
+				opacity: 0;
+				transform: translateY(28px);
+				transition:
+					opacity 0.9s ease,
+					transform 0.9s ease;
+			}
+
+			.fade-up.visible {
+				opacity: 1;
+				transform: translateY(0);
+			}
+
+			.fade-up-delay-1 {
+				transition-delay: 0.1s;
+			}
+			.fade-up-delay-2 {
+				transition-delay: 0.2s;
+			}
+			.fade-up-delay-3 {
+				transition-delay: 0.3s;
+			}
+			.fade-up-delay-4 {
+				transition-delay: 0.4s;
+			}
+
+			/* ── MOBILE NAV ── */
+			.mobile-nav {
+				position: fixed;
+				inset: 0;
+				background: var(--ivory);
+				z-index: 150;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+				gap: 2.5rem;
+				transform: translateX(100%);
+				transition: transform 0.45s cubic-bezier(0.77, 0, 0.18, 1);
+			}
+
+			.mobile-nav.open {
+				transform: translateX(0);
+			}
+
+			.mobile-nav a {
+				font-family: 'Cormorant Garamond', serif;
+				font-size: 2rem;
+				color: var(--text);
+				text-decoration: none;
+				letter-spacing: 0.05em;
+			}
+
+			.mobile-nav a:hover {
+				color: var(--gold);
+			}
+
+			.mobile-nav-close {
+				position: absolute;
+				top: 1.8rem;
+				right: 4vw;
+				background: none;
+				border: none;
+				font-size: 1.8rem;
+				cursor: pointer;
+				color: var(--text);
+			}
+
+			/* ── RESPONSIVE ── */
+			@media (max-width: 900px) {
+				.about-grid {
+					grid-template-columns: 1fr;
+					gap: 3rem;
+				}
+				.about-frame {
+					display: none;
+				}
+				.portfolio-grid {
+					grid-template-columns: 1fr;
+				}
+				.skills-grid {
+					grid-template-columns: repeat(2, 1fr);
+				}
+				.approach-grid {
+					grid-template-columns: 1fr;
+					gap: 3rem;
+				}
+				.nav-links {
+					display: none;
+				}
+				.hamburger {
+					display: flex;
+				}
+				footer {
+					flex-direction: column;
+					text-align: center;
+				}
+				.footer-contact {
+					justify-content: center;
+					flex-wrap: wrap;
+				}
+			}
+
+			@media (max-width: 540px) {
+				.skills-grid {
+					grid-template-columns: 1fr;
+				}
+				.pad-section {
+					padding: 4.5rem 0;
+				}
+				.modal {
+					padding: 2rem;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<!-- NAVBAR -->
+		<nav id="navbar">
+			<a href="#hero" class="nav-logo">RK</a>
+			<ul class="nav-links">
+				<li><a href="#about">About</a></li>
+				<li><a href="#journey">Journey</a></li>
+				<li><a href="#portfolio">Events</a></li>
+				<li><a href="#skills">Skills</a></li>
+				<li><a href="#approach">Approach</a></li>
+			</ul>
+			<div class="hamburger" id="hamburger" aria-label="Open menu">
+				<span></span><span></span><span></span>
+			</div>
+		</nav>
+
+		<!-- MOBILE NAV -->
+		<div class="mobile-nav" id="mobileNav">
+			<button class="mobile-nav-close" id="mobileNavClose">✕</button>
+			<a href="#about" class="mobile-link">About</a>
+			<a href="#journey" class="mobile-link">Journey</a>
+			<a href="#portfolio" class="mobile-link">Events</a>
+			<a href="#skills" class="mobile-link">Skills</a>
+			<a href="#approach" class="mobile-link">Approach</a>
+		</div>
+
+		<!-- HERO -->
+		<section id="hero">
+			<div class="hero-bg"></div>
+			<div class="hero-content">
+				<p class="hero-eyebrow">
+					Luxury Wedding Coordination & Event Experiences
+				</p>
+				<h1 class="hero-title">
+					Creating <em>Meaningful</em> Celebrations<br />With Precision & Heart
+				</h1>
+				<p class="hero-sub">
+					Aspiring Wedding Planner with hands-on experience in wedding
+					coordination, vendor management, hospitality, and on-ground execution.
+				</p>
+				<div class="hero-buttons">
+					<a href="#about" class="btn-primary">Explore My Work</a>
+				</div>
+			</div>
+			<div class="scroll-line">
+				<div class="scroll-bar"></div>
+				<span>Scroll</span>
+			</div>
+		</section>
+
+		<!-- ABOUT -->
+		<section id="about" class="pad-section">
+			<div class="container">
+				<div class="about-grid">
+					<div class="about-img-wrap fade-up">
+						<div class="about-img-placeholder">
+							<img
+								src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=700&auto=format&fit=crop&q=80"
+								alt="Rishabh Kumar - Wedding Planner"
+								loading="lazy"
+							/>
+						</div>
+						<div class="about-frame"></div>
+					</div>
+					<div class="about-text">
+						<span class="section-label fade-up">About Me</span>
+						<h2 class="section-heading fade-up fade-up-delay-1">
+							A Passion for <em>Purposeful</em> Celebrations
+						</h2>
+						<div class="divider fade-up fade-up-delay-2"></div>
+						<p class="fade-up fade-up-delay-2">
+							I am a wedding enthusiast at heart — someone who genuinely loves
+							every dimension of what makes a celebration memorable. From the
+							intricate details of décor and table settings to the warmth of a
+							perfectly managed guest experience, I believe celebrations are a
+							deeply human art form.
+						</p>
+						<p class="fade-up fade-up-delay-2">
+							With a strong eye for décor aesthetics, food & beverage
+							presentation, clothing sensibilities, and gifting coordination, I
+							bring a holistic understanding of the Indian wedding ecosystem. My
+							technical background from a prior corporate career has given me
+							exceptional organisational discipline, attention to timelines, and
+							a structured approach to even the most emotionally complex events.
+						</p>
+						<p class="fade-up fade-up-delay-3">
+							I made a conscious decision to leave a well-paying corporate
+							career to pursue something that fills me with genuine meaning —
+							creating beautiful moments for people on the most important days
+							of their lives. I planned my own wedding, coordinated celebrations
+							for family and friends, and every experience only deepened my
+							commitment to this profession.
+						</p>
+						<div class="quote-block fade-up fade-up-delay-3">
+							<p>
+								"Great celebrations are never just organised. They are
+								thoughtfully felt."
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- JOURNEY -->
+		<section id="journey" class="pad-section">
+			<div class="container">
+				<div style="max-width: 520px; margin-bottom: 4rem">
+					<span class="section-label fade-up">Experience & Growth</span>
+					<h2 class="section-heading fade-up fade-up-delay-1">
+						My Journey Into <em>Weddings</em> & Events
+					</h2>
+					<div class="divider fade-up fade-up-delay-2"></div>
+				</div>
+
+				<div class="timeline">
+					<div class="tl-item fade-up">
+						<div class="tl-dot"></div>
+						<h3>Hands-On Wedding Planning Experience</h3>
+						<p style="margin-bottom: 0.8rem">
+							Managed and coordinated weddings and social functions for friends
+							and family — each experience sharpening my instincts for
+							execution, hospitality, and people management.
+						</p>
+						<ul>
+							<li>Vendor coordination and relationship management</li>
+							<li>Guest hospitality and experience planning</li>
+							<li>Event timelines and scheduling</li>
+							<li>Décor discussions and aesthetic supervision</li>
+							<li>Logistics management and on-ground execution</li>
+							<li>Real-time troubleshooting and problem-solving</li>
+						</ul>
+					</div>
+
+					<div class="tl-item fade-up fade-up-delay-1">
+						<div class="tl-dot"></div>
+						<h3>Planning My Own Wedding</h3>
+						<p>
+							One of the most transformative personal experiences — personally
+							handling all coordination aspects of my own wedding. This gave me
+							an inside perspective on both the emotional weight and logistical
+							complexity that every client carries into the planning process.
+						</p>
+						<ul>
+							<li>End-to-end vendor management and negotiations</li>
+							<li>Hospitality coordination and guest communication</li>
+							<li>Décor supervision and aesthetic decision-making</li>
+							<li>Gifting and packaging discussions</li>
+							<li>Guest experience management across multiple functions</li>
+						</ul>
+					</div>
+
+					<div class="tl-item fade-up fade-up-delay-2">
+						<div class="tl-dot"></div>
+						<h3>Event Entrepreneur Workshop — Sounding Board</h3>
+						<p style="margin-bottom: 0.8rem">
+							Completed an intensive 7-day Event Entrepreneur Workshop conducted
+							by Sounding Board, led by Sabbas Joseph, Founder of Wizcraft — one
+							of India's foremost event professionals. Key learnings included:
+						</p>
+						<ul>
+							<li>Event execution frameworks and best practices</li>
+							<li>Client servicing and communication protocols</li>
+							<li>Understanding the event business ecosystem</li>
+							<li>Coordination workflows and team dynamics</li>
+							<li>Hospitality and guest experience management</li>
+						</ul>
+					</div>
+
+					<div class="tl-item fade-up fade-up-delay-3">
+						<div class="tl-dot"></div>
+						<h3>Professional Transition</h3>
+						<p>
+							Made a deliberate and considered transition from a stable,
+							high-paying corporate career into wedding planning — choosing
+							meaning over comfort. This decision reflects not impulsiveness but
+							a deep conviction that the most fulfilling work lies in creating
+							joyful, lasting memories for others.
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- PORTFOLIO -->
+		<section id="portfolio" class="pad-section">
+			<div class="container">
+				<div
+					style="
+						display: flex;
+						justify-content: space-between;
+						align-items: flex-end;
+						margin-bottom: 3rem;
+						flex-wrap: wrap;
+						gap: 1.5rem;
+					"
+				>
+					<div>
+						<span class="section-label fade-up">Events & Portfolio</span>
+						<h2 class="section-heading fade-up fade-up-delay-1">
+							Celebrations <em>Crafted</em><br />With Care
+						</h2>
+					</div>
+					<p
+						style="
+							font-size: 0.85rem;
+							color: var(--text-light);
+							max-width: 320px;
+							line-height: 1.75;
+						"
+						class="fade-up fade-up-delay-2"
+					>
+						A glimpse into celebrations I've helped coordinate and manage — each
+						one a unique story told through detail and dedication.
+					</p>
+				</div>
+
+				<div class="portfolio-grid">
+					<!-- Card 1 -->
+					<div class="port-card fade-up" onclick="openModal('haldi')">
+						<div class="port-card-img">
+							<img
+								src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=800&auto=format&fit=crop&q=80"
+								alt="Haldi Celebration"
+								loading="lazy"
+							/>
+						</div>
+						<div class="port-card-overlay">
+							<div class="port-card-body">
+								<h3>Haldi Celebration</h3>
+								<p>Intimate Ceremony · Full Coordination</p>
+							</div>
+						</div>
+						<div class="port-card-hover">
+							<h3>Haldi Celebration</h3>
+							<ul>
+								<li>Guest coordination & welcome</li>
+								<li>Vendor & décor supervision</li>
+								<li>Timeline management</li>
+								<li>Hospitality & catering flow</li>
+							</ul>
+							<span class="view-more-btn">View Details</span>
+						</div>
+					</div>
+
+					<!-- Card 2 -->
+					<div
+						class="port-card fade-up fade-up-delay-1"
+						onclick="openModal('mehendi')"
+					>
+						<div class="port-card-img">
+							<img
+								src="https://images.unsplash.com/photo-1510076857177-7470076d4098?w=800&auto=format&fit=crop&q=80"
+								alt="Mehendi Function"
+								loading="lazy"
+							/>
+						</div>
+						<div class="port-card-overlay">
+							<div class="port-card-body">
+								<h3>Mehendi Function</h3>
+								<p>Pre-Wedding · Multi-Vendor Coordination</p>
+							</div>
+						</div>
+						<div class="port-card-hover">
+							<h3>Mehendi Function</h3>
+							<ul>
+								<li>Artist & vendor coordination</li>
+								<li>Décor aesthetic supervision</li>
+								<li>Guest seating & flow</li>
+								<li>Music & entertainment flow</li>
+							</ul>
+							<span class="view-more-btn">View Details</span>
+						</div>
+					</div>
+
+					<!-- Card 3 -->
+					<div
+						class="port-card fade-up fade-up-delay-2"
+						onclick="openModal('wedding')"
+					>
+						<div class="port-card-img">
+							<img
+								src="https://images.unsplash.com/photo-1519741497674-611481863552?w=800&auto=format&fit=crop&q=80"
+								alt="Wedding Coordination"
+								loading="lazy"
+							/>
+						</div>
+						<div class="port-card-overlay">
+							<div class="port-card-body">
+								<h3>Wedding Coordination</h3>
+								<p>Full-Day · End-to-End Execution</p>
+							</div>
+						</div>
+						<div class="port-card-hover">
+							<h3>Wedding Coordination</h3>
+							<ul>
+								<li>Full-day timeline execution</li>
+								<li>Venue & vendor management</li>
+								<li>Bridal party coordination</li>
+								<li>Guest experience & hospitality</li>
+							</ul>
+							<span class="view-more-btn">View Details</span>
+						</div>
+					</div>
+
+					<!-- Card 4 -->
+					<div
+						class="port-card fade-up fade-up-delay-3"
+						onclick="openModal('family')"
+					>
+						<div class="port-card-img">
+							<img
+								src="https://images.unsplash.com/photo-1529543544282-ea669407fca3?w=800&auto=format&fit=crop&q=80"
+								alt="Family Celebration"
+								loading="lazy"
+							/>
+						</div>
+						<div class="port-card-overlay">
+							<div class="port-card-body">
+								<h3>Family Celebration Event</h3>
+								<p>Social Gathering · Hospitality-Focused</p>
+							</div>
+						</div>
+						<div class="port-card-hover">
+							<h3>Family Celebration Event</h3>
+							<ul>
+								<li>Guest invitation & coordination</li>
+								<li>Catering & F&B supervision</li>
+								<li>Décor & ambiance planning</li>
+								<li>On-ground troubleshooting</li>
+							</ul>
+							<span class="view-more-btn">View Details</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- SKILLS -->
+		<section id="skills" class="pad-section">
+			<div class="container">
+				<div style="text-align: center; max-width: 560px; margin: 0 auto 4rem">
+					<span class="section-label fade-up">Expertise</span>
+					<h2 class="section-heading fade-up fade-up-delay-1">
+						Core <em>Strengths</em>
+					</h2>
+					<div
+						class="divider fade-up fade-up-delay-2"
+						style="margin: 1.5rem auto 0"
+					></div>
+				</div>
+
+				<div class="skills-grid">
+					<div class="skill-card fade-up">
+						<span class="skill-icon">🤝</span>
+						<h4>Vendor Coordination</h4>
+						<p>
+							Building and managing reliable vendor relationships for seamless
+							event delivery.
+						</p>
+					</div>
+					<div class="skill-card fade-up fade-up-delay-1">
+						<span class="skill-icon">🥂</span>
+						<h4>Guest Hospitality</h4>
+						<p>
+							Ensuring every guest feels welcomed, cared for, and central to the
+							celebration.
+						</p>
+					</div>
+					<div class="skill-card fade-up fade-up-delay-2">
+						<span class="skill-icon">🚚</span>
+						<h4>Wedding Logistics</h4>
+						<p>
+							End-to-end logistics coordination across venues, vendors, and
+							timelines.
+						</p>
+					</div>
+					<div class="skill-card fade-up fade-up-delay-3">
+						<span class="skill-icon">⏱</span>
+						<h4>Timeline Management</h4>
+						<p>
+							Precise scheduling that keeps events flowing gracefully from start
+							to finish.
+						</p>
+					</div>
+					<div class="skill-card fade-up">
+						<span class="skill-icon">💬</span>
+						<h4>Client Communication</h4>
+						<p>
+							Warm, professional communication that builds trust and clarity
+							throughout.
+						</p>
+					</div>
+					<div class="skill-card fade-up fade-up-delay-1">
+						<span class="skill-icon">🌸</span>
+						<h4>Décor Coordination</h4>
+						<p>
+							Translating aesthetic visions into tangible, beautiful
+							environments.
+						</p>
+					</div>
+					<div class="skill-card fade-up fade-up-delay-2">
+						<span class="skill-icon">🎁</span>
+						<h4>Gifting Coordination</h4>
+						<p>
+							Curating and managing gifting experiences that reflect
+							thoughtfulness and luxury.
+						</p>
+					</div>
+					<div class="skill-card fade-up fade-up-delay-3">
+						<span class="skill-icon">👥</span>
+						<h4>Team Collaboration</h4>
+						<p>
+							Coordinating cross-functional teams with clarity, empathy, and
+							direction.
+						</p>
+					</div>
+					<div class="skill-card fade-up">
+						<span class="skill-icon">⚡</span>
+						<h4>Problem Solving</h4>
+						<p>
+							Calm, creative resolution of last-minute challenges without
+							disrupting flow.
+						</p>
+					</div>
+					<div class="skill-card fade-up fade-up-delay-1">
+						<span class="skill-icon">💰</span>
+						<h4>Budget Awareness</h4>
+						<p>
+							Mindful allocation of resources to maximise beauty within defined
+							parameters.
+						</p>
+					</div>
+					<div class="skill-card fade-up fade-up-delay-2">
+						<span class="skill-icon">💻</span>
+						<h4>Technical & Organisational Skills</h4>
+						<p>
+							Tech-savvy systems thinking applied to event planning and
+							execution.
+						</p>
+					</div>
+					<div class="skill-card fade-up fade-up-delay-3">
+						<span class="skill-icon">🎯</span>
+						<h4>On-Ground Execution</h4>
+						<p>
+							Present, focused, and hands-on during the most critical moments of
+							any event.
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- APPROACH -->
+		<section id="approach" class="pad-section">
+			<div class="container">
+				<div class="approach-grid">
+					<div class="approach-copy">
+						<span class="section-label fade-up">My Philosophy</span>
+						<h2
+							class="section-heading fade-up fade-up-delay-1"
+							style="color: var(--white)"
+						>
+							An Approach Rooted in <em>Heart</em> & Precision
+						</h2>
+						<div class="divider fade-up fade-up-delay-2"></div>
+						<p class="fade-up fade-up-delay-2">
+							Every celebration deserves more than efficient management — it
+							deserves genuine attention, emotional intelligence, and the kind
+							of care that turns moments into lifelong memories. I bring an
+							ownership mindset to everything I do; I don't manage events, I
+							take responsibility for them.
+						</p>
+						<p class="fade-up fade-up-delay-3">
+							My background in a high-performance corporate environment trained
+							me to stay composed under pressure, to think systemically, and to
+							anticipate problems before they arise. But it's my love for people
+							and hospitality that transforms that structure into warmth.
+						</p>
+						<p class="fade-up fade-up-delay-3">
+							I approach every client relationship as a partnership — listening
+							deeply, communicating clearly, and delivering not just what was
+							promised, but what was truly felt. When a couple says their day
+							was everything they imagined, that is the only metric that
+							matters.
+						</p>
+					</div>
+					<div class="approach-metrics">
+						<div class="metric-item fade-up">
+							<div class="metric-num">01</div>
+							<div class="metric-label">People-First Approach</div>
+							<p
+								style="
+									font-size: 0.85rem;
+									color: rgba(255, 255, 255, 0.5);
+									margin-top: 0.6rem;
+									line-height: 1.7;
+								"
+							>
+								Human connection is at the centre of every decision — from how
+								guests are greeted to how clients are supported through
+								uncertainty.
+							</p>
+						</div>
+						<div class="metric-item fade-up fade-up-delay-1">
+							<div class="metric-num">02</div>
+							<div class="metric-label">Detail-Driven Coordination</div>
+							<p
+								style="
+									font-size: 0.85rem;
+									color: rgba(255, 255, 255, 0.5);
+									margin-top: 0.6rem;
+									line-height: 1.7;
+								"
+							>
+								The difference between a good event and an extraordinary one
+								lives in the details — the ones most people never see but always
+								feel.
+							</p>
+						</div>
+						<div class="metric-item fade-up fade-up-delay-2">
+							<div class="metric-num">03</div>
+							<div class="metric-label">Calm Under Pressure</div>
+							<p
+								style="
+									font-size: 0.85rem;
+									color: rgba(255, 255, 255, 0.5);
+									margin-top: 0.6rem;
+									line-height: 1.7;
+								"
+							>
+								Celebrations rarely go exactly to plan. What separates a great
+								coordinator is the ability to adapt gracefully — calmly, and
+								without the couple ever knowing.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- FOOTER -->
+		<footer>
+			<div class="footer-logo">Rishabh Kumar</div>
+			<p class="footer-text">
+				Crafted with passion for celebrations & meaningful experiences.
+			</p>
+			<div class="footer-contact">
+				<a href="tel:9910149303" class="footer-contact-item">+91 9910149303</a>
+				<span class="footer-contact-sep">·</span>
+				<a
+					href="mailto:themooncloudevents@gmail.com"
+					class="footer-contact-item"
+					>themooncloudevents@gmail.com</a
+				>
+			</div>
+		</footer>
+
+		<!-- MODALS -->
+		<div class="modal-overlay" id="modal-overlay" onclick="closeModal(event)">
+			<div class="modal" id="modal-content">
+				<button class="modal-close" onclick="closeModalBtn()">✕</button>
+				<div id="modal-inner"></div>
+			</div>
+		</div>
+
+		<script>
+			/* ── NAVBAR SCROLL ── */
+			const navbar = document.getElementById('navbar');
+			window.addEventListener('scroll', () => {
+				navbar.classList.toggle('scrolled', window.scrollY > 60);
+			});
+
+			/* ── HAMBURGER ── */
+			const hamburger = document.getElementById('hamburger');
+			const mobileNav = document.getElementById('mobileNav');
+			const mobileNavClose = document.getElementById('mobileNavClose');
+
+			hamburger.addEventListener('click', () =>
+				mobileNav.classList.add('open'),
+			);
+			mobileNavClose.addEventListener('click', () =>
+				mobileNav.classList.remove('open'),
+			);
+			document.querySelectorAll('.mobile-link').forEach((l) => {
+				l.addEventListener('click', () => mobileNav.classList.remove('open'));
+			});
+
+			/* ── INTERSECTION OBSERVER ── */
+			const observer = new IntersectionObserver(
+				(entries) => {
+					entries.forEach((e) => {
+						if (e.isIntersecting) {
+							e.target.classList.add('visible');
+							observer.unobserve(e.target);
+						}
+					});
+				},
+				{ threshold: 0.1 },
+			);
+
+			document
+				.querySelectorAll('.fade-up')
+				.forEach((el) => observer.observe(el));
+
+			/* ── MODAL DATA ── */
+			const modalData = {
+				haldi: {
+					title: 'Haldi Celebration',
+					tag: 'Intimate Ceremony · Pre-Wedding Function',
+					img: 'https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=900&auto=format&fit=crop&q=80',
+					desc: 'A joyful, intimate Haldi ceremony coordinated for a close family gathering. The function required careful attention to both the emotional tone of the event and the practical logistics of managing guests, vendors, and décor within a private residence setting.',
+					responsibilities: [
+						'Vendor sourcing and coordination (florals, catering, photography)',
+						'Guest welcome and seating arrangement',
+						'Timeline creation and execution management',
+						'Décor setup supervision and aesthetic alignment',
+						'Food & beverage flow coordination',
+						'On-ground problem resolution',
+						'Hospitality management throughout the function',
+					],
+				},
+				mehendi: {
+					title: 'Mehendi Function',
+					tag: 'Pre-Wedding · Multi-Vendor Coordination',
+					img: 'https://images.unsplash.com/photo-1510076857177-7470076d4098?w=900&auto=format&fit=crop&q=80',
+					desc: 'A vibrant Mehendi function coordinated with multiple vendors, guests, and creative elements. The event balanced the celebratory energy of a pre-wedding gathering with thoughtful logistics and smooth guest flow.',
+					responsibilities: [
+						'Mehendi artist and entertainment coordination',
+						'Décor aesthetic guidance and supervision',
+						'Guest coordination and flow management',
+						'Food & beverage timeline alignment',
+						'Music and ambiance curation support',
+						'Family coordination and VIP guest management',
+						'Vendor settlement and post-event wrap-up',
+					],
+				},
+				wedding: {
+					title: 'Wedding Coordination',
+					tag: 'Full-Day · End-to-End Execution',
+					img: 'https://images.unsplash.com/photo-1519741497674-611481863552?w=900&auto=format&fit=crop&q=80',
+					desc: 'Full-day wedding coordination encompassing every function from the baraat arrival to the vidaai. Managing a wedding day requires exceptional composure, multitasking, and the ability to hold together multiple moving parts with grace.',
+					responsibilities: [
+						'Full-day event timeline management',
+						'Venue setup and vendor coordination',
+						'Bridal party scheduling and coordination',
+						'Priest and ceremony flow management',
+						'Guest hospitality and seating management',
+						'Catering and food service timeline',
+						'Real-time problem solving and contingency management',
+						'Post-wedding vendor coordination and wrap-up',
+					],
+				},
+				family: {
+					title: 'Family Celebration Event',
+					tag: 'Social Gathering · Hospitality-Focused',
+					img: 'https://images.unsplash.com/photo-1529543544282-ea669407fca3?w=900&auto=format&fit=crop&q=80',
+					desc: 'A curated family celebration event bringing together multi-generational guests in a warm, hospitable environment. The focus was on creating a seamless, warm atmosphere where every guest felt personally attended to.',
+					responsibilities: [
+						'Guest invitation and RSVP management',
+						'Venue selection and décor coordination',
+						'Catering vendor management and menu planning support',
+						'Guest welcome and hospitality management',
+						'Ambiance and music curation',
+						'On-ground execution and floor management',
+						'Post-event feedback and vendor communication',
+					],
+				},
+			};
+
+			function openModal(key) {
+				const d = modalData[key];
+				document.getElementById('modal-inner').innerHTML = `
+      <div class="modal-img"><img src="${d.img}" alt="${d.title}" /></div>
+      <span class="modal-tag">${d.tag}</span>
+      <h2>${d.title}</h2>
+      <div class="divider"></div>
+      <p>${d.desc}</p>
+      <h4 style="font-family:'Cormorant Garamond',serif;font-size:1.1rem;margin-bottom:0.8rem;margin-top:1.2rem;">Responsibilities Handled</h4>
+      <ul class="modal-list">${d.responsibilities.map((r) => `<li>${r}</li>`).join('')}</ul>
+    `;
+				document.getElementById('modal-overlay').classList.add('active');
+				document.body.style.overflow = 'hidden';
+			}
+
+			function closeModal(e) {
+				if (e.target === document.getElementById('modal-overlay'))
+					closeModalBtn();
+			}
+
+			function closeModalBtn() {
+				document.getElementById('modal-overlay').classList.remove('active');
+				document.body.style.overflow = '';
+			}
+		</script>
+	</body>
+</html>
