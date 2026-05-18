@@ -214,13 +214,35 @@
 				position: absolute;
 				inset: 0;
 				background:
+					/* Layer 1 — strong top vignette: darkens ceiling/top so eyebrow text pops */
 					linear-gradient(
 						to bottom,
-						rgba(20, 10, 5, 0.22) 0%,
-						rgba(15, 8, 3, 0.38) 100%
+						rgba(12, 6, 2, 0.72) 0%,
+						rgba(12, 6, 2, 0.38) 22%,
+						transparent 45%
 					),
-					url('https://images.unsplash.com/photo-1519741497674-611481863552?w=1600&auto=format&fit=crop&q=80')
-						center/cover no-repeat;
+					/* Layer 2 — centre crush: targets the bright flower-wall / arch zone where the title lives */
+					linear-gradient(
+							to bottom,
+							transparent 18%,
+							rgba(10, 5, 2, 0.58) 42%,
+							rgba(10, 5, 2, 0.5) 62%,
+							transparent 78%
+						),
+					/* Layer 3 — bottom vignette: grounds the button + scroll indicator area */
+					linear-gradient(
+							to top,
+							rgba(10, 5, 2, 0.78) 0%,
+							rgba(10, 5, 2, 0.35) 28%,
+							transparent 52%
+						),
+					/* Layer 4 — warm tint across full frame: unifies the colour temperature */
+					linear-gradient(
+							to bottom,
+							rgba(18, 8, 3, 0.18) 0%,
+							rgba(18, 8, 3, 0.18) 100%
+						),
+					url('/images/hero.jpg') center/cover no-repeat;
 				transform: scale(1.04);
 				animation: heroZoom 18s ease-in-out infinite alternate;
 			}
@@ -257,7 +279,7 @@
 				font-weight: 500;
 				letter-spacing: 0.3em;
 				text-transform: uppercase;
-				color: var(--gold);
+				color: #d4ae78;
 				margin-bottom: 1.6rem;
 				opacity: 0;
 				animation: fadeUp 1s 0.7s ease forwards;
@@ -1205,7 +1227,7 @@
 					<div class="about-img-wrap fade-up">
 						<div class="about-img-placeholder">
 							<img
-								src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=700&auto=format&fit=crop&q=80"
+								src="images/about.jpg"
 								alt="Rishabh Tehelramani - Wedding Planner"
 								loading="lazy"
 							/>
@@ -1370,7 +1392,7 @@
 					<div class="port-card fade-up" onclick="openModal('haldi')">
 						<div class="port-card-img">
 							<img
-								src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=800&auto=format&fit=crop&q=80"
+								src="images/haldi-1.jpg"
 								alt="Haldi Celebration"
 								loading="lazy"
 							/>
@@ -1400,7 +1422,7 @@
 					>
 						<div class="port-card-img">
 							<img
-								src="https://images.unsplash.com/photo-1510076857177-7470076d4098?w=800&auto=format&fit=crop&q=80"
+								src="images/mehendi-1.jpg"
 								alt="Mehendi Function"
 								loading="lazy"
 							/>
@@ -1430,7 +1452,7 @@
 					>
 						<div class="port-card-img">
 							<img
-								src="https://images.unsplash.com/photo-1519741497674-611481863552?w=800&auto=format&fit=crop&q=80"
+								src="images/wedding-1.jpg"
 								alt="Wedding Coordination"
 								loading="lazy"
 							/>
@@ -1460,7 +1482,7 @@
 					>
 						<div class="port-card-img">
 							<img
-								src="https://images.unsplash.com/photo-1529543544282-ea669407fca3?w=800&auto=format&fit=crop&q=80"
+								src="images/celebration-1.jpg"
 								alt="Family Celebration"
 								loading="lazy"
 							/>
@@ -1696,12 +1718,10 @@
 				Crafted with passion for celebrations & meaningful experiences.
 			</p>
 			<div class="footer-contact">
-				<a href="tel:9910149303" class="footer-contact-item">+91 9910149303</a>
+				<a href="tel:9911841241" class="footer-contact-item">+91 9911841241</a>
 				<span class="footer-contact-sep">·</span>
-				<a
-					href="mailto:themooncloudevents@gmail.com"
-					class="footer-contact-item"
-					>themooncloudevents@gmail.com</a
+				<a href="mailto:rishabhk3003@gmail.com" class="footer-contact-item"
+					>rishabhk3003@gmail.com</a
 				>
 			</div>
 		</footer>
@@ -1759,9 +1779,9 @@
 					title: 'Haldi Celebration',
 					tag: 'Intimate Ceremony · Pre-Wedding Function',
 					images: [
-						'https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=900&auto=format&fit=crop&q=80',
-						'https://images.unsplash.com/photo-1537633552985-df8429e8048b?w=900&auto=format&fit=crop&q=80',
-						'https://images.unsplash.com/photo-1602173574767-37ac01994b2a?w=900&auto=format&fit=crop&q=80',
+						'images/haldi-2.jpg',
+						'images/haldi-3.jpg',
+						'images/haldi-4.jpg',
 					],
 					desc: 'A joyful, intimate Haldi ceremony coordinated for a close family gathering. The function required careful attention to both the emotional tone of the event and the practical logistics of managing guests, vendors, and décor within a private residence setting.',
 					responsibilities: [
@@ -1778,9 +1798,13 @@
 					title: 'Mehendi Function',
 					tag: 'Pre-Wedding · Multi-Vendor Coordination',
 					images: [
-						'https://images.unsplash.com/photo-1510076857177-7470076d4098?w=900&auto=format&fit=crop&q=80',
-						'https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=900&auto=format&fit=crop&q=80',
-						'https://images.unsplash.com/photo-1522413452208-996ff3f3e740?w=900&auto=format&fit=crop&q=80',
+						'images/mehendi-2.jpg',
+						'images/mehendi-3.jpg',
+						'images/mehendi-4.jpg',
+						'images/mehendi-5.jpg',
+						'images/mehendi-7.jpg',
+						'images/mehendi-8.jpg',
+						'images/mehendi-9.jpg',
 					],
 					desc: 'A vibrant Mehendi function coordinated with multiple vendors, guests, and creative elements. The event balanced the celebratory energy of a pre-wedding gathering with thoughtful logistics and smooth guest flow.',
 					responsibilities: [
@@ -1797,10 +1821,14 @@
 					title: 'Wedding Coordination',
 					tag: 'Full-Day · End-to-End Execution',
 					images: [
-						'https://images.unsplash.com/photo-1519741497674-611481863552?w=900&auto=format&fit=crop&q=80',
-						'https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?w=900&auto=format&fit=crop&q=80',
-						'https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=900&auto=format&fit=crop&q=80',
-						'https://images.unsplash.com/photo-1606800052052-a08af7148866?w=900&auto=format&fit=crop&q=80',
+						'images/wedding-2.jpg',
+						'images/wedding-3.jpg',
+						'images/wedding-4.jpg',
+						'images/wedding-5.jpg',
+						'images/wedding-6.jpg',
+						'images/wedding-7.jpg',
+						'images/wedding-8.jpg',
+						'images/wedding-9.jpg',
 					],
 					desc: 'Full-day wedding coordination encompassing every function from the baraat arrival to the vidaai. Managing a wedding day requires exceptional composure, multitasking, and the ability to hold together multiple moving parts with grace.',
 					responsibilities: [
@@ -1818,9 +1846,9 @@
 					title: 'Family Celebration Event',
 					tag: 'Social Gathering · Hospitality-Focused',
 					images: [
-						'https://images.unsplash.com/photo-1529543544282-ea669407fca3?w=900&auto=format&fit=crop&q=80',
-						'https://images.unsplash.com/photo-1470753937643-efeb931202a9?w=900&auto=format&fit=crop&q=80',
-						'https://images.unsplash.com/photo-1541532713592-79a0317b6b77?w=900&auto=format&fit=crop&q=80',
+						'images/celebration-1.jpg',
+						'images/celebration-2.jpg',
+						'images/celebration-3.jpg',
 					],
 					desc: 'A curated family celebration event bringing together multi-generational guests in a warm, hospitable environment. The focus was on creating a seamless, warm atmosphere where every guest felt personally attended to.',
 					responsibilities: [
